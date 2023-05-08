@@ -4,11 +4,16 @@
     if theme.post_edit.enable
       a.post-edit-link(href=theme.post_edit.url + page.source title=_p('post.edit') target="_blank")
         i.anzhiyufont.anzhiyu-icon-pencil
-        
+
   #post-meta
     .meta-firstline
+      if (theme.post_meta.post.author)
+        i.iconfont.icon-zuozhe
+        span.post-meta-author=page.author
       if (theme.post_meta.post.date_type)
         span.post-meta-date
+          if (theme.post_meta.post.author)
+            span.post-meta-separator |
           if (theme.post_meta.post.date_type === 'both')
             i.anzhiyufont.anzhiyu-icon-calendar-days.post-meta-icon
             span.post-meta-label= _p('post.created')
@@ -29,13 +34,17 @@
         span.post-meta-categories
           if (theme.post_meta.post.date_type)
             span.post-meta-separator |
-
           each item, index in page.categories.data
             i.anzhiyufont.anzhiyu-icon-inbox.post-meta-icon
             a(href=url_for(item.path)).post-meta-categories #[=item.name]
             if (index < page.categories.data.length - 1)
               i.anzhiyufont.anzhiyu-icon-angle-right.post-meta-separator
-
+      if (theme.post_meta.post.tags && page.tags.data.length > 0)
+        span.post-meta-tags
+          span.post-meta-separator |
+          each item, index in page.tags.data
+            i.iconfont.icon-Tags
+            a(href=url_for(item.path)).article-meta__tags #[=item.name]
     .meta-secondline
       - let postWordcount = theme.wordcount.enable && (theme.wordcount.post_wordcount || theme.wordcount.min2read)
       if (postWordcount)
@@ -51,7 +60,7 @@
             i.anzhiyufont.anzhiyu-icon-clock.post-meta-icon
             span.post-meta-label= _p('post.min2read') + ':'
             span= min2read(page.content, {cn: 350, en: 160}) + _p('post.min2read_unit')
-    
+
       //- for pv and count
       mixin pvBlock(parent_id,parent_class,parent_title)
         span.post-meta-separator |
@@ -98,7 +107,7 @@
             span.post-meta-label= _p('post.comments') + ':'
             if block
               block
-        
+
         case whichCount
           when 'Valine'
             +countBlock

@@ -205,7 +205,7 @@ blockquote {
         display: flex
         flex-direction: column;
         width: 100%;
-        
+
         &__tag-list,&__category-list
           display: flex
           width: 100%;
@@ -256,7 +256,7 @@ blockquote {
       margin: 0
     a.link,.post-copyright__notice a
       font-weight: 500;
-      border-bottom: solid 2px var(--anzhiyu-lighttext);
+      border-bottom: solid 2px var(--anzhiyu-hovertext);
       color: var(--anzhiyu-fontcolor);
       padding: 0 0.2em;
       text-decoration: none;
@@ -269,7 +269,7 @@ blockquote {
       align-items: center;
     &__original,&__reprint
       background: var(--anzhiyu-fontcolor);
-      color: var(--anzhiyu-card-bg);
+      color: var(--anzhiyu-white);
       padding: 0.2rem 1rem;
       font-size: .8rem;
       border-radius: 8px;
@@ -278,7 +278,7 @@ blockquote {
       line-height: 1.5;
       white-space: nowrap;
       user-select: none;
-  
+
     .anzhiyufont.anzhiyu-icon-copyright
       position: absolute
       font-size: 1.3em
@@ -288,7 +288,7 @@ blockquote {
       z-index: -1;
       @media screen and (min-width: 1365px)
         z-index: 0;
-        
+
 
     &:hover
       box-shadow: 0 0 8px 0 rgba(232, 237, 250, .6), 0 2px 4px 0 rgba(232, 237, 250, .5)
@@ -412,7 +412,7 @@ blockquote {
   line-height: 1;
   padding: 4px 5px;
   cursor pointer
-#ai-Toggle 
+#ai-Toggle
   font-size: 12px;
   background: var(--anzhiyu-lighttext);
   color: var(--anzhiyu-card-bg);

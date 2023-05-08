@@ -750,6 +750,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         consoleEl.classList.add("show");
       }
+      //快捷键开关
       const consoleKeyboard = document.querySelector("#consoleKeyboard");
       if (consoleKeyboard) {
         if (localStorage.getItem("keyboardToggle") === "true") {

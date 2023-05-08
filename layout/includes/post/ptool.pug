@@ -5,7 +5,7 @@ if !theme.disable_top_img && page.top_img !== false
   else if is_page()
     - var top_img = page.top_img || theme.default_top_img
   else if is_tag()
-    - var top_img = theme.tag_per_img && theme.tag_per_img[page.tag] 
+    - var top_img = theme.tag_per_img && theme.tag_per_img[page.tag]
     - top_img = top_img ? top_img : (theme.tag_img !== false ? theme.tag_img || theme.default_top_img : false)
   else if is_category()
     - var top_img = theme.category_per_img && theme.category_per_img[page.category]
@@ -57,7 +57,7 @@ if !theme.disable_top_img && page.top_img !== false
             .post-meta__box__tag-list
               each item, index in page.tags.data
                 a(href=url_for(item.path)).post-meta__box__tags
-                  span.tags-punctuation 
+                  span.tags-punctuation
                     i.anzhiyufont.anzhiyu-icon-tag
                   =item.name
                   span.tagsPageCount=item.length
@@ -70,7 +70,7 @@ if theme.ptool.categories
         .post-meta__box__category-list
           each item, index in page.categories.data
             a(href=url_for(item.path)).post-meta__box__categoryes
-              span.categoryes-punctuation 
+              span.categoryes-punctuation
                 i.anzhiyufont.anzhiyu-icon-inbox
               =item.name
               span.categoryesPageCount=item.length
@@ -78,7 +78,7 @@ if theme.ptool.categories
         .post-meta__box__tag-list
           each item, index in page.tags.data
             a(href=url_for(item.path)).post-meta__box__tags
-              span.tags-punctuation 
+              span.tags-punctuation
                 i.anzhiyufont.anzhiyu-icon-tag
               =item.name
               span.tagsPageCount=item.length

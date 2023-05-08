@@ -1,0 +1,56 @@
+/* 顶部卡片样式 */
+/*例：藏宝阁页面顶部卡片标签样式*/
+.page-top-card {
+    background-size: cover;
+    border: 1px solid #fff;
+    background-position: center;
+    height: 20rem;
+    padding: 10px 2.7rem;
+    border-radius: 20px;
+    color: #fff;
+    position: relative;
+    background-color: #666
+}
+
+span.content-item-title {
+    font-size: 2.3em;
+    font-weight: 700;
+    line-height: 1.2
+}
+
+.content-bottom {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    position: absolute;
+    width: calc(100% - 5.4rem);
+    bottom: 1rem
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+@media screen and (max-width: 768px) {
+    .page-top-card {
+       border-radius:12px
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .page-top-card {
+        padding:10px 1rem;
+        height: 12rem
+    }
+    .content-bottom {
+    width: calc(100% - 2rem);
+    }
+}
+
+[data-theme=dark] .page-top-card {
+    opacity: .9
+}

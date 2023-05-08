@@ -167,8 +167,8 @@ error_img:
 # A simple 404 page
 error_404:
   enable: true
-  subtitle: "请尝试站内搜索寻找文章"
-  background: https://bu.dusays.com/2023/03/03/6401a7906aa4a.gif
+  subtitle: "Page Not Found"
+  background: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/page-404.png
 
 post_meta:
   page: # Home Page
@@ -415,7 +415,7 @@ footer:
       shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg #徽标API
       message: 博客框架为Hexo_v5.4.0 #徽标提示语
     - link: https://anzhiy.cn/
-      shields: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg
+      shields: https://pan.anzhiy.cn/d/anzhiyu/svg/Theme-AnZhiYu-2E67D3.svg
       message: 本站使用AnZhiYu主题
     - link: https://www.dogecloud.com/
       shields: https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/CDN-多吉云-3693F3.svg
@@ -426,65 +426,6 @@ footer:
     - link: http://creativecommons.org/licenses/by-nc-sa/4.0/
       shields: https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg
       message: 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可
-  socialBar:
-    enable: false
-    centerImg:
-    left:
-      - title: email
-        link: mailto:anzhiyu-c@qq.com
-        icon: anzhiyufont anzhiyu-icon-envelope
-      - title: 微博
-        link: https://weibo.com/u/6378063631
-        icon: anzhiyufont anzhiyu-icon-weibo
-      - title: facebook
-        link: https://www.facebook.com/profile.php?id=100092208016287&sk=about
-        icon: anzhiyufont anzhiyu-icon-envelope
-    right:
-      - title: Github
-        link: https://github.com/anzhiyu-c
-        icon: anzhiyufont anzhiyu-icon-github
-      - title: Bilibili
-        link: https://space.bilibili.com/372204786
-        icon: anzhiyufont anzhiyu-icon-bilibili
-      - title: 抖音
-        link: https://v.douyin.com/DwCpMEy/
-        icon: anzhiyufont anzhiyu-icon-envelope
-  list:
-    enable: false
-    randomFriends: 3
-    project:
-      - title: 服务
-        links:
-          - title: 51la统计
-            link: https://v6.51.la/
-          - title: 十年之约
-            link: https://www.foreverblog.cn/
-          - title: 版权协议
-            link: /copyright/
-      - title: 主题
-        links:
-          - title: 文档
-            link: /docs/
-          - title: 源码
-            link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
-          - title: 更新日志
-            link: /update/
-      - title: 导航
-        links:
-          - title: 即刻短文
-            link: /essay/
-          - title: 友链文章
-            link: /fcircle/
-          - title: 留言板
-            link: /comments/
-      - title: 协议
-        links:
-          - title: 隐私协议
-            link: /privacy/
-          - title: Cookies
-            link: /cookies/
-          - title: 版权协议
-            link: /copyright/
 
 # Analysis
 # --------------------------------------
@@ -1074,11 +1015,11 @@ post_head_ai_description:
   key: xxxx
   Referer: https://xx.xx/
 
-# 快捷键配置
+# 博客快捷键配置
 shortcutKey:
-  enable: false
+  enable: true
   delay: 300 # shift按下延时多久开启
-
+  
 # Inject
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前

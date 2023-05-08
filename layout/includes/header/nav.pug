@@ -13,7 +13,7 @@ nav#nav
                   a.back-menu-item(href=item.link, title=item.name, target='_blank')
                     img.back-menu-item-icon(src=item.icon alt=item.name)
                     span.back-menu-item-text= item.name
-    a#site-name(href=url_for('/'))
+    a#site-name(href='/'+url_for())
       .title #[=config.title]
       i.anzhiyufont.anzhiyu-icon-house-chimney
 
@@ -26,17 +26,21 @@ nav#nav
   #nav-right
     if theme.nav.travelling
       .nav-button.only-home#travellings_button(style='display: flex')
-        a.site-page(onclick='anzhiyu.totraveling()', title='随机前往一个开往项目网站', href='javascript:void(0);', rel='external nofollow', data-pjax-state='external')
+        a.site-page(onclick='anzhiyu.totraveling()', title='随便看看 - 随机访问本站文章', href='javascript:void(0);', rel='external nofollow', data-pjax-state='external')
           i.anzhiyufont.anzhiyu-icon-train
     .nav-button#randomPost_button
       a.site-page(onclick='toRandomPost()', title='随机前往一个文章', href='javascript:void(0);')
         i.anzhiyufont.anzhiyu-icon-dice
     if (theme.algolia_search.enable || theme.local_search.enable)
       div.nav-button#search-button
-        a.site-page.social-icon.search(href='javascript:void(0);', title='搜索🔍')
+        a.site-page.social-icon.search(href='javascript:void(0);', title='搜索内容 - 搜一搜，省时又省力')
           i.anzhiyufont.anzhiyu-icon-magnifying-glass
           span=' '+_p('search.title')
-    
+      div.nav-button#changeBg-button
+        a.site-page.social-icon.search(href='javascript:void(0);', onclick='toggleWinbox()', title='切换背景 - 换一个背景，换一种感觉')
+          i.iconfont.icon-qiehuankapian
+
+
     if darkmode.enable && darkmode.button
       div.nav-button#darkmode_navswitch
         a.darkmode_switchbutton(type="button" href='javascript:void(0);' title=_p('rightside.night_mode_title') onclick="rm.switchDarkMode()")

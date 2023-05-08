@@ -1,0 +1,14 @@
+body[data-type="collect"] main #page {
+  border: 0;
+  box-shadow: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+[data-theme="dark"] body[data-type="collect"] #page {
+  background: transparent;
+}
+
+.flink .anzhiyu-flink-list {
+  padding: 0;
+}

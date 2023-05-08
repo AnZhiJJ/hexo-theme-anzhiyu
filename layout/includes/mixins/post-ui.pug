@@ -30,6 +30,11 @@ mixin postUI(posts)
             span.article-meta
               i.anzhiyufont.anzhiyu-icon-thumbtack.sticky
               span.sticky= _p('sticky')
+          if (theme.post_meta.page.author)
+            span.post-meta-author
+              i.iconfont.icon-zuozhe
+              span.post-meta-author=article.author
+              span.article-meta-separator |
           if (theme.post_meta.page.date_type)
             span.post-meta-date
               if (theme.post_meta.page.date_type === 'both')
@@ -51,8 +56,8 @@ mixin postUI(posts)
           if (theme.post_meta.page.tags && article.tags.data.length > 0)
             span.article-meta.tags
               each item, index in article.tags.data
-                a(href=url_for(item.path)).article-meta__tags 
-                  span 
+                a(href=url_for(item.path)).article-meta__tags
+                  span
                     i.anzhiyufont.anzhiyu-icon-hashtag
                     =item.name
           

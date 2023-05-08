@@ -1066,7 +1066,7 @@ const anzhiyu = {
     document.querySelector(".reward-main").style.display = "none";
     document.getElementById("quit-box").style.display = "none";
   },
-
+  //快捷键开关函数
   keyboardToggle: function () {
     const isKeyboardOn = anzhiyu_keyboard;
 
